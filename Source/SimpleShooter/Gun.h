@@ -35,7 +35,10 @@ private:
 	USkeletalMeshComponent* Mesh;
 
 	UPROPERTY(EditAnywhere)
-	UParticleSystem* MuzzleFlash = nullptr;
+	UParticleSystem* MuzzleFlash;
+
+	UPROPERTY(EditAnywhere)
+	UParticleSystem* ImpactEffect;
 
 	UPROPERTY(EditAnywhere)
 	float MaxRange = 10000;
