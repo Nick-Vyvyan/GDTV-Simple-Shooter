@@ -36,6 +36,9 @@ public:
 	UFUNCTION(BlueprintPure)
 	bool IsDead() const;
 
+	UFUNCTION(BlueprintCallable)
+	void Shoot();
+
 private:
 
 	UPROPERTY(EditDefaultsOnly)

@@ -22,18 +22,5 @@ void AShooterAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(this, 0);
-
-	if (LineOfSightTo(PlayerPawn))
-	{
-		//SetFocus(PlayerPawn, EAIFocusPriority::Gameplay);
-		Blackboard->SetValueAsVector(TEXT("PlayerLocation"), PlayerPawn->GetActorLocation());
-		Blackboard->SetValueAsVector(TEXT("LastKnownPlayerLocation"), PlayerPawn->GetActorLocation());
-	}
-	else
-	{
-		Blackboard->ClearValue(TEXT("PlayerLocation"));
-		//ClearFocus(EAIFocusPriority::Gameplay);
-	}
 }
 
