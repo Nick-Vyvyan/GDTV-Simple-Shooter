@@ -46,7 +46,7 @@ void AGun::PullTrigger()
 		}
 		if (ImpactSound)
 		{
-			UGameplayStatics::PlaySoundAtLocation(GetWorld(), ImpactSound, HitResult.ImpactPoint, .25f);
+			UGameplayStatics::PlaySoundAtLocation(GetWorld(), ImpactSound, HitResult.ImpactPoint);
 		}
 
 		AActor* HitActor = HitResult.GetActor();
